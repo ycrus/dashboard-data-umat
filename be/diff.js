@@ -195,4 +195,4 @@ function diffBatches(prevRows, currRows, compareColumns) {
   return { added, removed, modified, unchanged };
 }
 
-module.exports = { diffBatches, makeKey, KEY_COLUMNS };
+module.exports = { diffBatches, makeKey, KEY_COLUMNS, normalizeItem };

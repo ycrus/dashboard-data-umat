@@ -1,0 +1,44 @@
+@import url('https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,600;9..144,700&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap');
+
+.mdu-root {
+  --ink-900:#1C2333; --ink-800:#242C40; --panel:#242C40; --panel-2:#2B3450;
+  --paper:#EDE7D6; --paper-dim:#B7B2A0;
+  --gold:#C9A24B; --gold-dim:#8A7238;
+  --sage:#7DA187; --sage-dim:#3E5445;
+  --rust:#C06B4C; --rust-dim:#5A3428;
+  --slate:#7E9BB8;
+  font-family: 'IBM Plex Sans', sans-serif;
+  background: var(--ink-900);
+  color: var(--paper);
+  min-height: 100%;
+}
+.mdu-display { font-family: 'Fraunces', serif; }
+.mdu-mono { font-family: 'IBM Plex Mono', monospace; }
+.mdu-card { background: var(--panel); border: 1px solid #384062; border-radius: 4px; }
+.mdu-stamp {
+  border: 2px solid currentColor; border-radius: 999px; transform: rotate(-4deg);
+  letter-spacing: 0.08em; font-family: 'IBM Plex Mono', monospace;
+}
+.mdu-tab { border-bottom: 2px solid transparent; cursor: pointer; transition: border-color .15s ease, color .15s ease; }
+.mdu-tab[data-active="true"] { border-bottom-color: var(--gold); color: var(--paper); }
+.mdu-tab[data-active="false"] { color: var(--paper-dim); }
+.mdu-tab:hover { color: var(--paper); }
+.mdu-row-added { border-left: 3px solid var(--sage); }
+.mdu-row-removed { border-left: 3px solid var(--rust); }
+.mdu-row-modified { border-left: 3px solid var(--gold); }
+.mdu-select { background: var(--panel-2); border: 1px solid #40496A; color: var(--paper); border-radius: 4px; font-family: 'IBM Plex Mono', monospace; }
+.mdu-input { background: var(--panel-2); border: 1px solid #40496A; color: var(--paper); border-radius: 4px; }
+.mdu-scrollbar::-webkit-scrollbar { width: 8px; height: 8px; }
+.mdu-scrollbar::-webkit-scrollbar-thumb { background: #40496A; border-radius: 4px; }
+.mdu-scrollbar::-webkit-scrollbar-track { background: transparent; }
+.mdu-spin { animation: mdu-spin 1s linear infinite; }
+@keyframes mdu-spin { from { transform: rotate(0deg); } to { transform: rotate(360deg); } }
+.mdu-bar-track { background: #1C2333; border-radius: 999px; overflow: hidden; height: 6px; }
+.mdu-bar-fill { height: 100%; border-radius: 999px; }
+.mdu-toplevel-tab {
+  cursor: pointer; padding: 8px 14px; border-radius: 4px 4px 0 0;
+  border: 1px solid #384062; border-bottom: none;
+  font-family: 'IBM Plex Mono', monospace; font-size: 12px; letter-spacing: 0.04em;
+}
+.mdu-toplevel-tab[data-active="true"] { background: var(--panel); color: var(--paper); }
+.mdu-toplevel-tab[data-active="false"] { background: transparent; color: var(--paper-dim); }
